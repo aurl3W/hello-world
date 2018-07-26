@@ -1,0 +1,1 @@
+<?php require('../contentnotfound/not_found.html'); ?>
