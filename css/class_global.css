@@ -176,7 +176,8 @@ ul {
 }
 
 
-.at { color: lightblue; font-size:16pt; font-weight: bold; position: relative; top: -5px; float: left; }
+/* .at { color: lightblue; font-size:16pt; font-weight: bold; position: relative; top: -5px; float: left; } */
+.mail_ico { position: relative; top: 12px; }
 
 .spacer { padding-bottom: 50px; visibility :hidden; }
 
