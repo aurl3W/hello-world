@@ -4,182 +4,479 @@
 <meta charset="utf-8" />
 <meta name="robots" content="index, follow, all" />
 <meta name="Keywords" content="" />
-<meta name="author" content="Aur&eacute;lien Labrange - Aur&eacute;L3w" />
+<meta name="author" content="Aur&eacute;lien Labrange - AurL3w" />
 <meta name="Description" content="CV-aurl3w" />
 <meta name=viewport content="width=device-width, initial-scale=1">
-<title>CV</title>
+<title>CV - Aurélien Labrange</title>
 <link rel="stylesheet" type="text/css" href="css/class_global.css" />
-
-
-<script>
-
-var displayNone = 'none';
-var displayOk = 'inline';
-
-//var textBlocPresentation = document.querySelector('#presentation');
-//var titrePresentation = document.querySelector('#titre');
-/*
-var textBlocCompetences = document.querySelector('#competences');
-var titreCompetences = document.querySelector('#titre');
-
-var textBlocFormations = document.querySelector('#formations');
-var titreFormations = document.querySelector('#titre');
-
-var textBlocExpPro = document.querySelector('#expPro');
-var titreFormations = document.querySelector('#titre');
-
-var textBlocContact = document.querySelector('#contact');
-var titreContact = document.querySelector('#titre');
-*/
-function bt1() {
-	//if (document.getElementById('a')) {
-	//textBlocPresentation.style.display = displayNone;
-	//titrePresentation.innerHTML = 'Qui suis-je...?';
-
-	/*
-	textBlocCompetences.style.display = displayNone;
-	textBlocFormations.style.display = displayNone;
-	textBlocExpPro.style.display = displayNone;
-	textBlocContact.style.display = displayNone;
-	*/
-	
-	document.getElementById('presentation').style.display = displayOk; 
-	document.getElementById('titre').innerHTML = 'Qui suis-je...?';
-	document.getElementById('presentation').style.opacity = '1';
-	
-	document.getElementById('competences').style.opacity = '0';
-	
-	document.getElementById('competences').style.display = displayNone; 
-	document.getElementById('formations').style.display = displayNone;
-	document.getElementById('expPro').style.display = displayNone;
-	document.getElementById('contact').style.display = displayNone;
-	
-	
-	//alert('ok');
-	//}
-}
-
-
-
-</script>
+<script src="elements.js"></script>
 
 </head>
 
 <body onload="document.getElementById('presentation').style.opacity='1';">
 	
-	<div style="z-index: 500; opacity: 1; position:fixed; left:0px; top:0px; border: none; background: #aaa; padding: 16px; width: 100%; height: auto; color: #fff; clear: both;">
-		
-
-					<a href="#" id="a" onclick="bt1();"
-					class="boutons_menu" title="Présentation">Présentation</a>
-						
-		
-					<a href="#" onclick="getElementById('competences').style.display='inline'; getElementById('titre').innerHTML='Compétences';
-					getElementById('presentation').style.display='none'; 
-					getElementById('formations').style.display='none';
-					getElementById('expPro').style.display='none'
-					getElementById('contact').style.display='none';
-					
-					getElementById('competences').style.opacity='1';
-					getElementById('presentation').style.opacity='0';" 
-					class="boutons_menu" title="Compétences">Compétences</a>
-		
-						
-					<a href="#" onclick="getElementById('formations').style.display='inline'; getElementById('titre').innerHTML='Formations';
-					getElementById('presentation').style.display='none';
-					getElementById('competences').style.display='none';
-					getElementById('expPro').style.display='none';
-					getElementById('contact').style.display='none';" 
-					class="boutons_menu" title="Formations">Formations</a>
-		
-					
-					<a href="#" onclick="getElementById('expPro').style.display='inline'; getElementById('titre').innerHTML='Expériences professionnelles';
-					getElementById('presentation').style.display='none';
-					getElementById('competences').style.display='none';
-					getElementById('formations').style.display='none';
-					getElementById('contact').style.display='none';" 
-					class="boutons_menu" title="Expériences professionnelles">Expériences professionnelles</a>
-	
-						
-					<a href="#" onclick="getElementById('contact').style.display='inline'; getElementById('titre').innerHTML='Contact'; 
-					getElementById('presentation').style.display='none';
-					getElementById('competences').style.display='none';
-					getElementById('formations').style.display='none';
-					getElementById('expPro').style.display='none';" 
-					class="boutons_menu" title="Contact">Contact</a>
-
+	<div class="mainMenu" id="menu">
+		<ul>
+			<li><a href="#" onclick="btn(); progressBar_ImgTechWeb_NO();" class="boutons_menu" title="Présentation">Présentation</a></li>
+			<li><a href="#" onclick="btn1();" class="boutons_menu" title="Compétences">Compétences</a></li>
+			<li><a href="#" onclick="btn2(); progressBar_ImgTechWeb_NO();" class="boutons_menu" title="Formations">Formations</a></li>
+			<li><a href="#" onclick="btn3(); progressBar_ImgTechWeb_NO();" class="boutons_menu" title="Expériences professionnelles">Expériences professionnelles</a></li>
+			<li><a href="#" onclick="btn4(); progressBar_ImgTechWeb_NO();" class="boutons_menu" title="Contact">Contact</a></li>
+		</ul>
+		<div class="btnClose_MainMenu" onclick="closeMainMenu();">Fermer menu</div>
 	</div>
+	<div class="btnOpen_MainMenu" id="menuTab" onclick="openMainMenu();">Ouvrir menu</div>
 	
-	<div style="position:relative; top:50px;">
-	
-	
+	<div class="positionGlobal" id="content">
+		
 		<div class="blocTitre">
 		
+			<div class="intitule">&lt;Webmaster / Développeur web/&gt;</div>
 			<span class="texteTitre" id="titre">Qui suis-je...?</span>
-		
+			
 		</div>
 		<div class="blocContenu">
 		
-			<div class="texteContenu">
+			<div class="contenu">
 			
 				<div id="presentation">
 					<p> 
-						Passionné d'informatique, du web et de tout ce qui est électronique depuis toujours et de nature auto-didact, je propose désormais mes services dans le monde de la création de sites internet.
-					
-						En 2007, lors d'une formation en Maintenance des Systèmes et Réseaux Informatique, j'ai vu et appris les bases du langage du web, suite a ces cours, j'ai toute suite été intérressé et passioné par les résultats, les outils utilisés et la magie que prennait avec l'utilisation des différents langages pour réaliser de simple page.<br />
-						A l'issue de cette formation, j'ai continuer dans l'édition et la programmation web en-tant qu'auto-didact.<br />
-						
-						Par la suite, j'ai suivi une autre formation en infographiste - metteur en page - webdesign, ou j'y ai suivi des cours en web un peut plus élargis. Ce qui fait, que lors de cette expérience, j'y ai enrichie mes connaissances et compétences en y apprenant l'utilisation de nouveaux outils et de nouvelles methodes, afin de réaliser des pages web un peu plus intérréssente.<br />
-						Encore une fois, a l'issue de cette fornation, j'ai continuer en-tant qu'auto-didact et lors de mes expériences, j'ai vu et assimillé des nouvelles technique, afin, de réaliser et développer des sites et pages plus dynamique et attrayante.
-						<br />Au fur et a mesure, j'ai adaptés mes propres méthodes de travail et techniques, afin d'obtenir et de faire en sorte de développer des pages plus riche dans un style classique, simple d'utilisation et moderne a la fois, tout en m'inspirant des styles et techniques déjà existentes.
+						Aurélien Labrange, de nature autodidacte je suis passionné d'informatique, du web, de diverses technologies et de tout ce qui touche à l'électronique depuis toujours.<br />
+						En 2007, lors d'une première formation en Maintenance des Systèmes et Réseaux, j'y ai découvert et appris les bases du langage du web.<br >
+						Suite a ces cours, j'ai tout de suite été intérressé par les résultats, les outils utilisés et la magie qui prennait avec l'utilisation des différents langages pour réaliser de simple page web.<br />
+						Ce qui au fil du temps, je suis donc véritablement devenu un passioné de celà.<br /><br />
+						A l'issue de cette formation, j'ai continuer dans l'édition et la programmation web en-tant qu'autodidacte.<br />
+						Puis par la suite, j'ai suivi une autre formation en infographiste - metteur en page - webdesign - conception web, ou j'y ai suivi des cours en web un peut plus élargis.<br />
+						Ce qui fait donc que lors de cette expérience, j'y ai enrichie mes connaissances et compétences en y apprenant l'utilisation de nouveaux outils et de nouvelles methodes, afin de réaliser des pages web un peu plus intérréssente.<br />
+						Et encore une fois a l'issue de cette autre fornation, j'ai de nouveau continuer en-tant qu'autodidacte et lors de mes expériences, j'ai vu, découvert et assimillé des nouvelles techniques, afin, de réaliser et de développer des sites et pages web plus dynamique.<br />
+						Puis au fur et a mesure, j'ai adaptés mes propres méthodes de travail et techniques, afin d'obtenir et de faire en sorte de développer des pages web plus riche tout en gardant un style classique, une simplicité d'utilisation et leurs donnée un côté moderne à la fois, tout en m'inspirant des styles et techniques déjà existentes.
 					</p>
+					<p>
+						Mes centres d'intérêts :<br />
+						Musique(Audiophile amateur passionné), Amateur passionné de Home-Cinéma ; Cinéma(Amateur passionné des techniques des salles), Traitements audio (musique et cinéma), Informatique, Jeux vidéos(En particulier sur PC), Films(d'animation, action, aventures, sciences fictions, comédies...), Magazines d'informatique et des nouvelles technologies, Lectures diverse
+					</p>				
 				</div>
 			
-				<div style="display:none;" id="competences">
+				<div id="competences" onmouseover="progressBar_ImgTechWeb_OK();">
 					
-					<div style="color: steelblue; font-weight: bold;">Développement web</div>
-					<img src="imgs/dot.png" style="z-index:0; position:relative; left:8px; top:-15px;" /><img src="imgs/bas-controle-a-droite-icone.png" style="border:0;" /><img src="imgs/dossier-ouvrez-icone-big.png" style="border:0;" />
+					<!--Développement-->
+					<div class="treeCategoryTitle">Développement web</div>
+					<img src="imgs/dot.png" class="treeMainFolder" alt="dot.png" />
+					<img src="imgs/bas-controle-a-droite-icone.png" alt="bas-controle-a-droite-icone.png" />
+					<img src="imgs/dossier-ouvrez-icone-big.png" alt="dossier-ouvrez-icone-big.png" />
+						
+						<p class="treeContent">
+							Langages pour la conception et le développement de site internet : Html, Php, CSS, Flash - Action Script, notions de JavaScript, jQuery et technologie Ajax 
+						</p>
+						
+									<div class="posImgCompetences">
+										<div class="blocImgTechWeb">
+											<div class="thumbnail">
+												<img class="img_competences" src="imgs/html5.png" alt="html5.png" />
+												
+											</div>
+											
+											<div>HTML</div>
+											<div id="progressBar" class="progressBar"></div>
+										</div>
+											
+										<div class="blocImgTechWeb">
+											<div class="thumbnail">
+												<img class="img_competences" src="imgs/css3.png" alt="css3.png" />
+
+											</div>
+										
+											<div>CSS</div>
+											<div id="progressBar1" class="progressBar"></div>
+										</div>
+											
+										<div class="blocImgTechWeb">
+											<div class="thumbnail">
+												<img class="img_competences" src="imgs/PHP-80.png" alt="PHP-80.png" />
+
+											</div>
+											
+											<div>PHP</div>
+											<div id="progressBar2" class="progressBar"></div>
+										</div>
+										
+										<div class="blocImgTechWeb">
+											<div class="thumbnail">
+												<img class="img_competences" src="imgs/mysql-80.png" alt="mysql-80.png" />
+											
+											</div>
+											
+											<div>MySql</div>
+											<div id="progressBar3" class="progressBar"></div>
+										</div>	
+											
+										<div class="blocImgTechWeb">
+											<div class="thumbnail">
+												<img class="img_competences" src="imgs/ajax-80.png" alt="ajax-80.png" />
+											
+											</div>
+											
+											<div>Ajax</div>
+											<div id="progressBar4" class="progressBar"></div>
+										</div>
+
+										
+
+										<div class="blocImgTechWeb">
+											<div class="thumbnail">
+												<img class="img_competences" src="imgs/jquery.png" alt="jquery.png" />
+											
+											</div>
+											
+											<div>jQuery</div>
+											<div id="progressBar5" class="progressBar"></div>
+										</div>
+									</div>											
+
+						<div style="clear:both;"></div>
+						
+						<img src="imgs/dot.png" class="tree" alt="dot.png" />
+						<img src="imgs/dot.png" class="treeLess90deg" alt="dot.png" />
+						<img src="imgs/dossier-ouvrez-icone.png" class="treeSubFolder" alt="dossier-ouvrez-icone.png" />
+						
+						<p class="treeContent">
+							<img src="imgs/dot.png" class="treeContent_SubFolder" alt="dot.png" />
+							<img src="imgs/dot.png" class="treeContent_SubFolder_Less90deg" alt="dot.png" />
+							Créations, configurations, gestions et intéractions avec des systèmes de bases de données MySQL (Bonnes notions)
+						</p>
+						
+						<img src="imgs/dot.png" class="tree" alt="dot.png" />
+						<img src="imgs/dot.png" class="treeLess90deg" alt="dot.png" />
+						<img src="imgs/dossier-ouvrez-icone.png" class="treeSubFolder" alt="dossier-ouvrez-icone.png" />
 					
+						<p class="treeContent">
+							<img src="imgs/dot.png" class="treeContent_SubFolder" alt="dot.png" />
+							<img src="imgs/dot.png" class="treeContent_SubFolder_Less90deg" alt="dot.png" />
+							Logiciels / éditeurs de langage pour le développement web : Notepad ++ (Utilisation courante)
+						</p>
+						
+						<img src="imgs/dot.png" class="tree" alt="dot.png" />
+						<img src="imgs/dot.png" class="treeLess90deg" alt="dot.png" />
+						<img src="imgs/dossier-ouvrez-icone.png" class="treeSubFolder" alt="dossier-ouvrez-icone.png" />
+					
+						<p class="treeContent">
+							<img src="imgs/dot.png" class="treeContent_SubFolder" alt="dot.png" />
+							<img src="imgs/dot.png" class="treeContent_SubFolder_Less90deg" alt="dot.png" />
+							Autres logiciels de conception web, web design et d'infographie : ILLUSTRATOR CS3, PHOTOSHOP CS3, DREAMWAVER CS3, FLASH CS3 et INDESIGN CS3
+						</p>
+						
+					<!--Informatique-->	
+					<div class="treeCategoryTitle">Informatique général</div>
+					<img src="imgs/dot.png" class="treeMainFolder" alt="dot.png" />
+					<img src="imgs/bas-controle-a-droite-icone.png" alt="bas-controle-a-droite-icone.png" />
+					<img src="imgs/dossier-ouvrez-icone-big.png" alt="dossier-ouvrez-icone-big.png" />
+						
+						<p class="treeContent">
+							Systèmes d'exploitation : Windows et Linux sous distribution Debian(Notions de base) 
+						</p>
+					
+						<img src="imgs/dot.png" class="tree" alt="dot.png" />
+						<img src="imgs/dot.png" class="treeLess90deg" alt="dot.png" />
+						<img src="imgs/dossier-ouvrez-icone.png" class="treeSubFolder" alt="dossier-ouvrez-icone.png" />
+						
+						<p class="treeContent">
+							<img src="imgs/dot.png" class="treeContent_SubFolder" alt="dot.png" />
+							<img src="imgs/dot.png" class="treeContent_SubFolder_Less90deg" alt="dot.png" />
+							Installations et configurations d'un serveur web sous apache2 avec les composants/paquets logiciels nécessaire pour fonctionner sous un système d'exploitation<br />
+							
+							- Linux Debian 8 Jessie (Notions de base et utilisation assez correct sur une anciène configuration tour PC de type gamer ré-adapter)<br />
+							- Linux Debian Wheezy (Raspberry Pi de 1ère génération et évolution vers un de 3ème génération ; Ils m'ont éventuelement grandement permis de découvrir, d'utiliser et d'en apprendre d'avantage sur les systèmes Linux et ainsi de faire de multiples travaux puis d'évoluer sur ces systèmes).
+						</p>
+						
+						<img src="imgs/dot.png" class="tree" alt="dot.png" />
+						<img src="imgs/dot.png" class="treeLess90deg" alt="dot.png" />
+						<img src="imgs/dossier-ouvrez-icone.png" class="treeSubFolder" alt="dossier-ouvrez-icone.png" />
+						
+						<p class="treeContent">
+							<img src="imgs/dot.png" class="treeContent_SubFolder" alt="dot.png" />
+							<img src="imgs/dot.png" class="treeContent_SubFolder_Less90deg" alt="dot.png" />
+							Montages, installations et configurations : Hardware / Software - Systèmes d'exploitation, réseaux et logiciels
+						</p>
+						
+						<img src="imgs/dot.png" class="tree" alt="dot.png" />
+						<img src="imgs/dot.png" class="treeLess90deg" alt="dot.png" />
+						<img src="imgs/dossier-ouvrez-icone.png" class="treeSubFolder" alt="dossier-ouvrez-icone.png" />
+						
+						<p class="treeContent">
+							<img src="imgs/dot.png" class="treeContent_SubFolder" alt="dot.png" />
+							<img src="imgs/dot.png" class="treeContent_SubFolder_Less90deg" alt="dot.png" />
+							Diagnostiques de panne, Dépannages, sauvegardes des données et réparations des systèmes
+						</p>
+						
+						<img src="imgs/dot.png" class="tree" alt="dot.png" />
+						<img src="imgs/dot.png" class="treeLess90deg" alt="dot.png" />
+						<img src="imgs/dossier-ouvrez-icone.png" class="treeSubFolder" alt="dossier-ouvrez-icone.png" />
+						
+						<p class="treeContent">
+							<img src="imgs/dot.png" class="treeContent_SubFolder" alt="dot.png" />
+							<img src="imgs/dot.png" class="treeContent_SubFolder_Less90deg" alt="dot.png" />
+							Remises en état et remplacements des éléments
+						</p>
+						
+						<img src="imgs/dot.png" class="tree" alt="dot.png" />
+						<img src="imgs/dot.png" class="treeLess90deg" alt="dot.png" />
+						<img src="imgs/dossier-ouvrez-icone.png" class="treeSubFolder" alt="dossier-ouvrez-icone.png" />
+						
+						<p class="treeContent">
+							<img src="imgs/dot.png" class="treeContent_SubFolder" alt="dot.png" />
+							<img src="imgs/dot.png" class="treeContent_SubFolder_Less90deg" alt="dot.png" />
+							Câblages réseaux informatique
+						</p>
+				</div>
+				
+				<div id="formations">
+					
+					<div class="treeCategoryTitle">Différents parcours - éducationnel et professionnelle</div>
+					<img src="imgs/dot.png" class="treeMainFolder" alt="dot.png" />
+					<img src="imgs/bas-controle-a-droite-icone.png" alt="bas-controle-a-droite-icone.png" />
+					<img src="imgs/dossier-ouvrez-icone-big.png" alt="dossier-ouvrez-icone-big.png" />
+						
+						<div class="treeCategoryTitle">2008 - 2009</div>
+						<img src="imgs/dot.png" class="tree" alt="dot.png" />
+						<img src="imgs/dot.png" class="treeLess90deg" alt="dot.png" />
+						<img src="imgs/dossier-ouvrez-icone.png" class="treeSubFolder" alt="dossier-ouvrez-icone.png" />
+						
+						<p class="treeContent">
+							<img src="imgs/dot.png" class="treeContent_SubFolder" alt="dot.png" />
+							<img src="imgs/dot.png" class="treeContent_SubFolder_Less90deg" alt="dot.png" />
+							Infographiste - metteur en page et conception de site internet ; WebDesign - Formation professionnelle - ATALANTE Compiègne 
+						</p>
+						
+						<div class="treeCategoryTitle">2007 - 2008</div>
+						<img src="imgs/dot.png" class="tree" alt="dot.png" />
+						<img src="imgs/dot.png" class="treeLess90deg" alt="dot.png" />
+						<img src="imgs/dossier-ouvrez-icone.png" class="treeSubFolder" alt="dossier-ouvrez-icone.png" />
+							<p class="treeContent">
+								<img src="imgs/dot.png" class="treeContent_SubFolder" alt="dot.png" />
+								<img src="imgs/dot.png" class="treeContent_SubFolder_Less90deg" alt="dot.png" />
+								MSR (Maintenance des Systèmes et Réseaux) - Formation professionnelle - GRETA Sud Aisne au Lycée Pierre Méchain à LAON 
+							</p>
+						
+						<div class="treeCategoryTitle">2006 - 2007</div>
+						<img src="imgs/dot.png" class="tree" alt="dot.png" />
+						<img src="imgs/dot.png" class="treeLess90deg" alt="dot.png" />
+						<img src="imgs/dossier-ouvrez-icone.png" class="treeSubFolder" alt="dossier-ouvrez-icone.png" />
+							<p class="treeContent">
+								<img src="imgs/dot.png" class="treeContent_SubFolder" alt="dot.png" />
+								<img src="imgs/dot.png" class="treeContent_SubFolder_Less90deg" alt="dot.png" />
+								1ère année de BAC PRO MEI (Maintenance des Equipements Industriels) - Alternance à l'AFIDA de Soissons 
+							</p>
+							
+						<div class="treeCategoryTitle">2001 - 2005</div>
+						<img src="imgs/dot.png" class="tree" alt="dot.png" />
+						<img src="imgs/dot.png" class="treeLess90deg" alt="dot.png" />
+						<img src="imgs/dossier-ouvrez-icone.png" class="treeSubFolder" alt="dossier-ouvrez-icone.png" />
+							<p class="treeContent">
+								<img src="imgs/dot.png" class="treeContent_SubFolder" alt="dot.png" />
+								<img src="imgs/dot.png" class="treeContent_SubFolder_Less90deg" alt="dot.png" />
+								BEP MSMA (Maintenance des Systèmes Mécaniques Automatisés) à la citée technique Léonard de Vinci à Soissons 
+							</p>
+							
+						<div class="treeCategoryTitle">1999 - 2001</div>
+						<img src="imgs/dot.png" class="tree" alt="dot.png" />
+						<img src="imgs/dot.png" class="treeLess90deg" alt="dot.png" />
+						<img src="imgs/dossier-ouvrez-icone.png" class="treeSubFolder" alt="dossier-ouvrez-icone.png" />
+							<p class="treeContent">
+								<img src="imgs/dot.png" class="treeContent_SubFolder" alt="dot.png" />
+								<img src="imgs/dot.png" class="treeContent_SubFolder_Less90deg" alt="dot.png" />
+								CAP Structure métallique à la citée technique Léonard de Vinci à Soissons								
+							</p>
+					
+				</div>
+				
+				<div id="expPro">
+					
+					<div class="treeCategoryTitle">Projets de création et développement de site internet</div>
+					<img src="imgs/dot.png" class="treeMainFolder" alt="dot.png" />
+					<img src="imgs/bas-controle-a-droite-icone.png" alt="bas-controle-a-droite-icone.png" />
+					<img src="imgs/dossier-ouvrez-icone-big.png" alt="dossier-ouvrez-icone-big.png" />
+						
+						<div class="treeCategoryTitle">2017</div>
+						<img src="imgs/dot.png" class="tree" alt="dot.png" />
+						<img src="imgs/dot.png" class="treeLess90deg" alt="dot.png" />
+						<img src="imgs/dossier-ouvrez-icone.png" class="treeSubFolder" alt="dossier-ouvrez-icone.png" />
+						<p class="treeContent">
+							<img src="imgs/dot.png" class="treeContent_SubFolder" alt="dot.png" />
+							<img src="imgs/dot.png" class="treeContent_SubFolder_Less90deg" alt="dot.png" />
+							<a class="liens" href="http://aurl3w.com/webradios" target="blank" title="Projet webradio">
+								Projet personnel d'un site regroupant plusieurs webradios (Projet en cours, mais fonctionnel)
+							</a>
+						</p>
+						
+						<div class="treeCategoryTitle">2015</div>
+						<img src="imgs/dot.png" class="tree" alt="dot.png" />
+						<img src="imgs/dot.png" class="treeLess90deg" alt="dot.png" />
+						<img src="imgs/dossier-ouvrez-icone.png" class="treeSubFolder" alt="dossier-ouvrez-icone.png" />
+							<p class="treeContent">
+								<img src="imgs/dot.png" class="treeContent_SubFolder" alt="dot.png" />
+								<img src="imgs/dot.png" class="treeContent_SubFolder_Less90deg" alt="dot.png" />
+								<a class="liens" href="http://aurl3w.com/travaux_projets/jesuischarlie/" target="blank" title="Petit site je suis Charlie">Petit site de façon à rendre hommage au magazine Charlie Hebdo</a> 
+							</p>
+						
+						<div class="treeCategoryTitle">2014</div>
+						<img src="imgs/dot.png" class="tree" alt="dot.png" />
+						<img src="imgs/dot.png" class="treeLess90deg" alt="dot.png" />
+						<img src="imgs/dossier-ouvrez-icone.png" class="treeSubFolder" alt="dossier-ouvrez-icone.png" />
+							<p class="treeContent">
+								<img src="imgs/dot.png" class="treeContent_SubFolder" alt="dot.png" />
+								<img src="imgs/dot.png" class="treeContent_SubFolder_Less90deg" alt="dot.png" />
+								<a class="liens" href="http://aurl3w.com/travaux_projets/fabien_sabatier/" target="blank" title="Projet Fabiens Sabatier">Maquette d'un projet de réalisation d'un site pour un photographe amateur/professionnel (Le projet n'a malheureusement pas pu aboutir...)</a> 
+							</p>
+							
+						<img src="imgs/dot.png" class="tree" alt="dot.png" />
+						<img src="imgs/dot.png" class="treeLess90deg" alt="dot.png" />
+						<img src="imgs/dossier-ouvrez-icone.png" class="treeSubFolder" alt="dossier-ouvrez-icone.png" />
+							<p class="treeContent">
+								<img src="imgs/dot.png" class="treeContent_SubFolder" alt="dot.png" />
+								<img src="imgs/dot.png" class="treeContent_SubFolder_Less90deg" alt="dot.png" />
+								<a class="liens" href="http://aurl3w.com/cv" target="blank" title="CV">Mon CV au format web (C'est une refonte complète de mon premier)</a> 
+							</p>
+							
+						<div class="treeCategoryTitle">Fin 2013 - 2014</div>
+						<img src="imgs/dot.png" class="tree" alt="dot.png" />
+						<img src="imgs/dot.png" class="treeLess90deg" alt="dot.png" />
+						<img src="imgs/dossier-ouvrez-icone.png" class="treeSubFolder" alt="dossier-ouvrez-icone.png" />
+							<p class="treeContent">
+								<img src="imgs/dot.png" class="treeContent_SubFolder" alt="dot.png" />
+								<img src="imgs/dot.png" class="treeContent_SubFolder_Less90deg" alt="dot.png" />
+								<a class="liens" href="http://aurl3w.com/latredulogis/" target="blank" title="L'&Acirc;tre du logis">L'&Acirc;tre du logis - Réalisation d'un site vitrine pour une entreprise spécialisée dans la vente et l'installation de poêles a bois et a granulés de bois</a> 
+							</p>
+							
+						<div class="treeCategoryTitle">2010</div>
+						<img src="imgs/dot.png" class="tree" alt="dot.png" />
+						<img src="imgs/dot.png" class="treeLess90deg" alt="dot.png" />
+						<img src="imgs/dossier-ouvrez-icone.png" class="treeSubFolder" alt="dossier-ouvrez-icone.png" />
+							<p class="treeContent">
+								<img src="imgs/dot.png" class="treeContent_SubFolder" alt="dot.png" />
+								<img src="imgs/dot.png" class="treeContent_SubFolder_Less90deg" alt="dot.png" />
+								<a class="liens" href="http://aurl3w.com/travaux_projets/stds/fr/" target="blank" title="STDS">STDS - L'une de mes toutes premières expériences de site web réaliser pour une petite entreprise spécialisé dans les services de transport</a> 
+							</p>
+							
+						<div class="treeCategoryTitle">2009</div>
+						
+						<img src="imgs/dot.png" class="tree" alt="dot.png" />
+						<img src="imgs/dot.png" class="treeLess90deg" alt="dot.png" />
+						<img src="imgs/dossier-ouvrez-icone.png" class="treeSubFolder" alt="dossier-ouvrez-icone.png" />
+							<p class="treeContent">
+								<img src="imgs/dot.png" class="treeContent_SubFolder" alt="dot.png" />
+								<img src="imgs/dot.png" class="treeContent_SubFolder_Less90deg" alt="dot.png" />
+								<a class="liens" href="http://aurl3w.com/travaux_projets/rodamu/" target="blank" title="Rodamu">Rodamu - Ma toute première expériences web pro freelance. C'est un petit site qui a été réaliser pour un graphiste freelance de Bande dessiné.</a> 
+							</p>
+						
+						<img src="imgs/dot.png" class="tree" alt="dot.png" />
+						<img src="imgs/dot.png" class="treeLess90deg" alt="dot.png" />
+						<img src="imgs/dossier-ouvrez-icone.png" class="treeSubFolder" alt="dossier-ouvrez-icone.png" />
+							<p class="treeContent">
+								<img src="imgs/dot.png" class="treeContent_SubFolder" alt="dot.png" />
+								<img src="imgs/dot.png" class="treeContent_SubFolder_Less90deg" alt="dot.png" />
+								<a class="liens" href="http://aurl3w.com/travaux_projets/dlod/accueil.html" target="blank" title="DLOD">DLOD - L'une de mes toutes premières expériences de site web réaliser dans le cadre d'une formation (Le projet n'est pas terminé et n'a pas abouti)</a> 
+							</p>
+							
+						<div class="treeCategoryTitle">Depuis mes débuts vers 2007, 2008 à 2014</div>
+						<img src="imgs/dot.png" class="tree" alt="dot.png" />
+						<img src="imgs/dot.png" class="treeLess90deg" alt="dot.png" />
+						<img src="imgs/dossier-ouvrez-icone.png" class="treeSubFolder" alt="dossier-ouvrez-icone.png" />
+							<p class="treeContent">
+								<img src="imgs/dot.png" class="treeContent_SubFolder" alt="dot.png" />
+								<img src="imgs/dot.png" class="treeContent_SubFolder_Less90deg" alt="dot.png" />
+								<a class="liens" href="http://aurl3w.com/travaux_projets/portail-perso/fr/home" target="blank" title="DLOD">Portail perso - C'est ma toute première expérience de travaux web.<br /> 
+								Exactement, c'est un tout petit portail personnalisé qui me servait à regrouper des liens vers des sites et autres... afin d'y accéder plus rapidements.<br />
+								Je l'utilisé régulièrement et il me permettait également d'essayer et de trouver des nouvelles techniques pour mieux développer.<br />
+								Sa première conception date depuis mes débuts, plus exactement depuis 2007, 2008 et petit à petit, j'ai essayé de lui apporter quelques petites améliorations pour but d'évoluer son interface.</a> 
+							</p>
+							
+							
+					<div class="treeCategoryTitle">Stages divers</div>
+					<img src="imgs/dot.png" class="treeMainFolder" alt="dot.png" />
+					<img src="imgs/bas-controle-a-droite-icone.png" alt="bas-controle-a-droite-icone.png" />
+					<img src="imgs/dossier-ouvrez-icone-big.png" alt="dossier-ouvrez-icone-big.png" />
+					
+						<div class="treeCategoryTitle">2009</div>
+						<img src="imgs/dot.png" class="tree" alt="dot.png" />
+						<img src="imgs/dot.png" class="treeLess90deg" alt="dot.png" />
+						<img src="imgs/dossier-ouvrez-icone.png" class="treeSubFolder" alt="dossier-ouvrez-icone.png" />
+							<p class="treeContent">
+								<img src="imgs/dot.png" class="treeContent_SubFolder" alt="dot.png" />
+								<img src="imgs/dot.png" class="treeContent_SubFolder_Less90deg" alt="dot.png" />
+								E-Progest - Laon : Informatique, dépannage informatique, infographie - mise en page, webdesign et création de site internet sur 2 mois de stage 
+							</p>
+							
+						<div class="treeCategoryTitle">2007</div>
+						<img src="imgs/dot.png" class="tree" alt="dot.png" />
+						<img src="imgs/dot.png" class="treeLess90deg" alt="dot.png" />
+						<img src="imgs/dossier-ouvrez-icone.png" class="treeSubFolder" alt="dossier-ouvrez-icone.png" />
+							<p class="treeContent">
+								<img src="imgs/dot.png" class="treeContent_SubFolder" alt="dot.png" />
+								<img src="imgs/dot.png" class="treeContent_SubFolder_Less90deg" alt="dot.png" />
+								SITAS Informatique - Soissons : Maintenance et dépannage informatique sur 1 mois de stage 
+							</p>
+							
+						<div class="treeCategoryTitle">2006</div>
+						<img src="imgs/dot.png" class="tree" alt="dot.png" />
+						<img src="imgs/dot.png" class="treeLess90deg" alt="dot.png" />
+						<img src="imgs/dossier-ouvrez-icone.png" class="treeSubFolder" alt="dossier-ouvrez-icone.png" />
+							<p class="treeContent">
+								<img src="imgs/dot.png" class="treeContent_SubFolder" alt="dot.png" />
+								<img src="imgs/dot.png" class="treeContent_SubFolder_Less90deg" alt="dot.png" />
+								EMI - Ostel : Electricité générale et maintenance industrielle 
+							</p>
+							
+						<div class="treeCategoryTitle">2005</div>
+						<img src="imgs/dot.png" class="tree" alt="dot.png" />
+						<img src="imgs/dot.png" class="treeLess90deg" alt="dot.png" />
+						<img src="imgs/dossier-ouvrez-icone.png" class="treeSubFolder" alt="dossier-ouvrez-icone.png" />
+							<p class="treeContent">
+								<img src="imgs/dot.png" class="treeContent_SubFolder" alt="dot.png" />
+								<img src="imgs/dot.png" class="treeContent_SubFolder_Less90deg" alt="dot.png" />
+								ELECTROTEK - Villeneuve St Germain : Electricité générale, climatisation et câblage réseau informatique 
+							</p>
+							
+						<div class="treeCategoryTitle">2002</div>
+						<img src="imgs/dot.png" class="tree" alt="dot.png" />
+						<img src="imgs/dot.png" class="treeLess90deg" alt="dot.png" />
+						<img src="imgs/dossier-ouvrez-icone.png" class="treeSubFolder" alt="dossier-ouvrez-icone.png" />
+							<p class="treeContent">
+								<img src="imgs/dot.png" class="treeContent_SubFolder" alt="dot.png" />
+								<img src="imgs/dot.png" class="treeContent_SubFolder_Less90deg" alt="dot.png" />
+								Entreprise ZANOTTI - Pinon : 2 mois de stage en électricité générale - Maintenance, dépannage et installations 
+							</p>
+							
+				</div>
+				
+				<div id="contact">
 					<p>
-						Langages pour la conception et le développement de site internet : Html, Php, CSS, Flash - Action Script, notions de JavaScript, jQuery et technologie Ajax 
+						Aurélien Labrange,<br />
+						22 Boulevard Jeanne D'Arc<br />
+						02200 SOISSONS<br /><br />
+						Tél: 09 81 95 22 49 - 07 62 60 33 71<br />
+						<div class="at">@</div>&nbsp;<a class="liens" href="mailto:aurelwebcreation@gmail.com" target="_blank" title="Envoyer un message">aurelwebcreation@gmail.com</a>	
 					</p>
-					
-					<div class="posImgCompetences">
-						<img class="img_competences" src="imgs/html5.png" alt="html5" />
-						<img class="img_competences" src="imgs/css3.png" alt="css3" />
-						<img class="img_competences" src="imgs/PHP-80.png" alt="php" />
-						<img class="img_competences" src="imgs/mysql-80.png" alt="mysql" />
-						<img class="img_competences" src="imgs/ajax-80.png" alt="ajax" />
-						<img class="img_competences" src="imgs/jquery.png" alt="jQuery" />
-					</div>
-					
-					<img src="imgs/dot.png" style="z-index:0; margin-right:1px; margin-top:1px; float:left;" />
-					<img src="imgs/dot.png" style="z-index:0; transform: rotate(-90deg);" />
-					<img src="imgs/dossier-ouvrez-icone.png" style="z-index:100; border:0;" />
-					<p>
-						Créations, configurations, gestions et intéractions avec des systèmes de bases de données MySQL (Bonnes notions)
-					</p>
-					
-				</div>
-				
-				<div style="display:none;" id="formations">
-					<p>Mes formations...</p>
-				</div>
-				
-				<div style="display:none;" id="expPro">
-					<p>Mes expériences pro...</p>
-				</div>
-				
-				<div style="display:none;" id="contact">
-					<p>Contact...</p>
 				</div>
 
 			
 			</div>
 		
 		</div>
-	
-	
+		
+	</div>
+	<div class="spacer">spacer</div>
+	<div class="footer">
+		<p>
+			&copy; 2018 - aurl3w
+		</p>
+		
+		<div class="cssValidator">
+			<a href="http://jigsaw.w3.org/css-validator/check/referer">
+			<img style="border:0;width:88px;height:31px"
+				src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+				alt="CSS Valide !" />
+			</a>
+		</div>
 	</div>
 	
 </body></html>
